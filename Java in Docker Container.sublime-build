@@ -21,7 +21,7 @@
             "docker_image": "android-sdk-TODO",
             "docker_image_tag": "latest",
             "type": "BUILD"
-        },
+        }
 
     ]
 }
