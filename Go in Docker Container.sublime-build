@@ -15,7 +15,7 @@
 
         { "name": "Go v1.4 in Docker Container",
             "docker_image_tag": "1.4"
-        },
+        }
     ]
 }
 
