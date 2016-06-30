@@ -1,0 +1,15 @@
+{
+    "target": "docker_build",
+    "type": "RUN",
+    "selector": "source.R",
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]+)",
+    "docker_image": "rocker/r-base",
+    "docker_image_tag": "latest",
+    "docker_image_exe": "Rscript",
+    "variants": [
+
+        { "name": "R with rOpenSci",
+            "docker_image": "rocker/ropensci"
+        },
+    ]
+}
