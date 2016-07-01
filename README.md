@@ -1,7 +1,7 @@
 SublimeDocker
 =============
 
-A Sublime Text package that include some build systems that use [Docker Language Stacks](http://blog.docker.com/2014/09/docker-hub-official-repos-announcing-language-stacks/). It currently build python, ruby, perl, c/c++ (gcc), clojure, go (golang), java, Dockerfile and Fig configuration files.
+A Sublime Text package that include some build systems that use [Docker Language Stacks](http://blog.docker.com/2014/09/docker-hub-official-repos-announcing-language-stacks/). It currently builds python (2.7, 3.4, or with the Tensorflow library), ruby, perl, c/c++ (gcc), clojure, go (golang), java, R, Dockerfile and Fig configuration files.
 
 # Prerequisite
 
@@ -26,7 +26,7 @@ After installing, you will find new options in `Tools > Build system` of your Su
 - Perl in Docker Container
 - Python in Docker Container
 - Ruby in Docker Container
-
+- R in Docker Container
 
 ### Build and run using Docker containers 
 

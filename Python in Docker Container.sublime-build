@@ -16,6 +16,10 @@
         { "name": "Python v3.4 in Docker Container",
             "docker_image_tag": "3.4"
         },
+
+        {"name": "Python with Tensorflow in Docker Container",
+            "docker_image": "gcr.io/tensorflow/tensorflow"
+        },
     ]
 }
 
