@@ -61,7 +61,9 @@ def isDockerRunningOnOSX():
         (os.path.isfile('/usr/local/bin/boot2docker')
             and isBoot2DockerRunning()) or
         (os.path.isfile('/usr/local/bin/docker-machine')
-            and isDockerMachineRunning()))
+            and isDockerMachineRunning()) or
+        (os.path.isfile('/usr/local/bin/docker')
+            and isDockerNativeRunning()))
 
 
 def isBoot2DockerRunning():
@@ -90,6 +92,13 @@ def isDockerMachineRunning():
     except KeyError:
         setEnvVariables()
     return True
+
+def isDockerNativeRunning():
+    docker_ping = "curl --unix-socket /var/run/docker.sock http://localhost/_ping"
+    status = os.popen(docker_ping).read().strip()
+    if (status == "OK"):
+        return True
+    return False
 
 def isDockerInstalledOnLinux():
     if shutil.which('docker') != None :
